@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2025 at 06:24 PM
+-- Generation Time: Apr 12, 2025 at 07:03 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,12 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login` (
   `username` varchar(20) NOT NULL,
-  `password` int(20) NOT NULL
+  `password` int(20) NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO `user` (  `username`, `password`) VALUES
-(1,  'ali1', '123'),
-(2, 'علی', 'ali123');
-COMMIT;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `password`, `admin`) VALUES
+('soheil', 1387, 1);
 
 -- --------------------------------------------------------
 
@@ -58,16 +62,19 @@ CREATE TABLE `modireat` (
 CREATE TABLE `register` (
   `name` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` int(20) NOT NULL
+  `password` int(20) NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`name`, `username`, `password`) VALUES
-('swsw', 'sa', 123),
-('swsw', 'sa', 1385);
+INSERT INTO `register` (`name`, `username`, `password`, `admin`) VALUES
+('swsw', 'sa', 123, 0),
+('swsw', 'sa', 1385, 0),
+('ali', 'ali1', 123, 0),
+('soheil', 'soheil', 1387, 1);
 
 -- --------------------------------------------------------
 

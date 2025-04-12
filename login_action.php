@@ -14,7 +14,7 @@ if($row)
     $_SESSION["admin"]=$row["admin"];
     ?>
     <script>
-        location.replace("news.php");
+        location.replace("index.php");
     </script>
     <?php
 }else

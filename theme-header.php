@@ -29,7 +29,7 @@ session_start();
             <li class="col-12 col-md h6"><a class="text-muted" href="index.php">خانه</a></li>
             <li class="col-12 col-md h6"><a class="text-muted" href="about.php">درباره ما</a></li>
             <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
-                <li class="col-12 co+l-md h6"><a class="text-muted" href="news.php">مدیریت</a></li>
+                <li class="col-12 co+l-md h6"><a class="text-muted" href="news_add.php">مدیریت</a></li>
             <?php }else{ ?>
                 
             <?php } ?>
